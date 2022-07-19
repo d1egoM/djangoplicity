@@ -178,7 +178,7 @@ class PictureOfTheWeek( ArchiveModel, TranslationModel ):
 
     class Meta:
         ordering = ('-release_date', )
-        verbose_name_plural = _('Pictures of the Week')
+        verbose_name_plural = _('Picture of the Month')
         app_label = 'media'
         permissions = [
             ( "view_only_non_default", "Can view only non default language" ),
@@ -228,7 +228,7 @@ class PictureOfTheWeekProxy( PictureOfTheWeek, TranslationProxyMixin ):
 
     class Meta:
         proxy = True
-        verbose_name = _('Picture of the Week translation')
+        verbose_name = _('Picture of the Month translation')
         app_label = 'media'
 
     class Archive:
